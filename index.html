@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=0, maximum-scale=1">
+    <title>小白-HOME简记与叙</title>
+    <meta name="keywords" content="小白主页">
+    <meta name="description" content="简单记录，小白的主页。">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/font.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- 如果这些插件库某天失效了，可以尝试把插件库存放到自己的cdn里（不建议存放本地） -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/axios.min.js"></script>
+    <script src="static/js/dayjs.min.js"></script>
+    <script src="static/js/sweetalert.min.js"></script>
+    <script src="static/js/dark-mode.min.js"></script>
+</head>
+
+<body>
+    <div class="xf_load"></div>
+    <!--<svg class="xf_triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420px"-->
+    <!--    height="403px" style="position: absolute; top: -135px; left: -120px;">-->
+    <!--    <defs>-->
+    <!--        <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="420px" height="403px">-->
+    <!--            <feOffset in="SourceAlpha" dx="6.691" dy="7.431" />-->
+    <!--            <feGaussianBlur result="blurOut" stdDeviation="3.606" />-->
+    <!--            <feFlood flood-color="rgb(220, 220, 220)" result="floodOut" />-->
+    <!--            <feComposite operator="atop" in="floodOut" in2="blurOut" />-->
+    <!--            <feComponentTransfer>-->
+    <!--                <feFuncA type="linear" slope="1" />-->
+    <!--            </feComponentTransfer>-->
+    <!--            <feMerge>-->
+    <!--                <feMergeNode />-->
+    <!--                <feMergeNode in="SourceGraphic" />-->
+    <!--            </feMerge>-->
+    <!--        </filter>-->
+    <!--    </defs>-->
+    <!--    <g filter="url(#Filter_0)">-->
+    <!--        <path fill-rule="evenodd" fill="rgb(235, 236, 240)"-->
+    <!--            d="M399.535,130.239 L113.067,382.877 L19.129,19.632 L399.535,130.239 Z" style="transition: all .2s;" />-->
+    <!--    </g>-->
+    <!--</svg>-->
+    <main class="core tow_core three_core">
+        <header class="xf_hd">
+            <!-- 隐藏H1标题利于网站seo优化 -->
+            <h1 style="display: none;">小白-简记与叙</h1>
+            <h2></h2>
+        </header>
+        <section class="xf_content">
+            <nav class="xf_nav xf_mimic_outer">
+                <div class="xf_center_box">
+                    <div class="Certification"></div>
+                    <div class="xf_tx" data-tip="您好！这里是小白HOME总站。">
+                        <!-- 质感效果（图片已压缩勿动） -->
+                        <img src="static/picture/zhigan.png">
+                        <!-- 如果上面的图片失效了请切换本地路径 -->
+                        <!-- <img src="static/picture/texture.png"> -->
+                        <!-- 这里替换头像 -->
+                        <img class="xf_mimic_outer" src="static/picture/xiaobai.png" alt="头像">
+                    </div>
+                    <ul class="xf_name">
+                        <li class="xf_mimic_outer hello">Good morning</li>
+                        <li class="xf_mimic_outer">小白-简记与叙</li>
+                        <li class="xf_mimic_outer address">南昌市 高温 10℃ 低温 5℃</li>
+                    </ul>
+                    <div class="clock xf_mimic_outer">
+                        <div class="hand hours"></div>
+                        <div class="hand minutes"></div>
+                        <div class="hand seconds"></div>
+                        <div class="point"></div>
+                        <div class="marker">
+                            <span class="marker__1"></span>
+                            <span class="marker__2"></span>
+                            <span class="marker__3"></span>
+                            <span class="marker__4"></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="xf_big_box">
+                <div class="xf_box_left">
+                    <div class="segmented-control xf_mimic_outer">
+                        <input type="radio" name="radio2" value="3" id="tab-1" checked="">
+                        <label for="tab-1" class="segmented-control__1 info">
+                            <p>关于</p>
+                        </label>
+                        <input type="radio" name="radio2" value="4" id="tab-2">
+                        <label for="tab-2" class="segmented-control__2 info">
+                            <p>信息</p>
+                        </label>
+                        <input type="radio" name="radio2" value="5" id="tab-3">
+                        <label for="tab-3" class="segmented-control__3 info">
+                            <p>留言</p>
+                        </label>
+                        <div class="segmented-control__color"></div>
+                    </div>
+                    <div class="xf_Show_box">
+                        <div class="menu_1 menu_2 xf_text xf_mimic_internal">
+                            <p id="xf_typewriters"></p>
+                        </div>
+                        <div class="menu_1 xf_information">
+                            <div class="xf_name_age">
+                                <h3 class="xf_mimic_outer">
+                                    <span><i class="iconfont">&#xe605;</i><strong>网站：</strong>小白Home</span>
+                                </h3>
+                                <h3 class="xf_mimic_outer">
+                                    <span><i class="iconfont">&#xe6d8;</i><strong>时长：</strong>2岁</span>
+                                </h3>
+                            </div>
+                            <div class="xf_area_like">
+                                <h3 class="xf_mimic_outer">
+                                    <span><i
+                                            class="iconfont">&#xe64b;</i><strong>地址：</strong>江西省</span>
+                                </h3>
+                                <h3 class="xf_mimic_outer">
+                                    <span><i class="iconfont">&#xe8c6;</i><strong>爱好：</strong>每一天</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <form action="/index/index/forms.html" method="post"
+                            class="menu_1 xf_message xf_mimic_outer">
+                            <div class="xf_nama_QQ">
+                                <input type="text" id="xf_inpname" name="name" tabindex="1" placeholder="你的昵称"
+                                    autocomplete="off">
+                                <input type="email" id="xf_inpemail" name="email" tabindex="2" placeholder="QQ邮箱"
+                                    autocomplete="off">
+                            </div>
+                            <textarea class="xf_inpmessage" name="msg" rows="4" cols="50" placeholder="留言功能已关闭，有问题联系小白哦！"
+                                autocomplete="off" maxlength="20"
+                                onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.\,\?\。\，\-\——\;\！\!\+\$]/g,'')"></textarea>
+                            <div class="controls">
+                                <div>
+                                    <span class="useCount" id="useCount">0</span>
+                                    <span>/</span>
+                                    <span>20</span>
+                                </div>
+                            </div>
+                            <span class="xf_sryzm">输入验证码：</span>
+                            <input class="xf_verify xf_mimic_internal" name="verify" type="text" autocomplete="off"
+                                maxlength="6" onkeyup="value=value.replace(/[/W]/g,'')"
+                                onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^/d]/g,''))">
+                            <!--<img class="img-yanzheng" style="margin-left: 10px; width: 100px; height: 30px;"-->
+                            <!--    src="/index/captcha.html"-->
+                            <!--    onclick="javascript:this.src=this.src+'?time='+Math.random()" />-->
+                            <input class="xf_submit" type="submit" value="已关闭提交">
+                        </form>
+                    </div>
+                </div>
+                <div class="xf_box_right xf_mimic_outer">
+                    <div class="xf_mes_list">
+                        <h3 class="xf_mimic_outer">留言列表</h3>
+                        <ul class="leaves">
+                                                        <li>
+                                <div class="xf_sm_box xf_mimic_internal">
+                                    <img src="static/picture/hy.jpg" alt="头像"
+                                        id="ha">
+                                    <span>小白</span>
+                                    <span>2024-05-21</span>
+                                    <p>小白TOP主页</p>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="xf_sm_box xf_mimic_internal">
+                                    <img src="static/picture/hy.jpg" alt="头像"
+                                        id="ha">
+                                    <span>小白</span>
+                                    <span>2023-07-28</span>
+                                    <p>留言功能已关闭，有问题联系小白站长哦！</p>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="xf_sm_box xf_mimic_internal">
+                                    <img src="static/picture/hy.jpg" alt="头像"
+                                        id="ha">
+                                    <span>小白</span>
+                                    <span>2022-04-28</span>
+                                    <p>欢迎访问小白-简记与叙！</p>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="xf_music_box">
+                        <div class="xf_QQ_wx">
+                            <a data-tip="快来加我的QQ吧！" href="http://wpa.qq.com/msgrd?v=3&uin=1691617546&site=qq&menu=yes"
+                                target="_blank" rel="noopener noreferrer" alt="QQ" target="_blank">
+                                <span class="xf_mimic_outer">
+                                    <img src="static/picture/qq-pic.png">
+                                </span>
+                            </a>
+                            <a class="my-wx" data-tip="微信也是可以的噢~" href="https://img01.anheyu.com/useruploads/156/2023/09/09/64fbff1a872de.jpg" rel="noopener noreferrer"target="_blank">
+                                <span class="xf_mimic_outer" alt="微信">
+                                    <img src="static/picture/wx-pic.png">
+                                </span>
+                            </a>
+                            <a data-tip="bilibili~" href="https://b23.tv/x5XnkRI"
+                                rel="noopener noreferrer" target="_blank">
+                                <span class="xf_mimic_outer" alt="bilibili">
+                                    <img src="static/picture/bilibili.png">
+                                </span>
+                            </a>
+                        </div>
+                        <!-- # -->
+                        <!--<div class="xf_mimic_outer" id="music" key=""-->
+                        <!--    api="">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xf_Skill xf_mimic_outer technology">
+                <div class="xf_outs">
+                    <h2>Skill/专业技能</h2>
+                    <div class="underscore"><span></span></div>
+                    <ul class="xf_technology xf_mimic_internal">
+                                                <li>
+                            <p class="xf_mimic_outer">音视频处理</p>
+                            <div data-tip="视频剪辑制作还是会的" class="xf_progress xf_mimic_outer">
+                                <div class="xf_mimic_outer" style="width: 75%;"></div>
+                            </div>
+                        </li>
+                                                <li>
+                            <p class="xf_mimic_outer">html</p>
+                            <div data-tip="搭建自己的小网站问题不大" class="xf_progress xf_mimic_outer">
+                                <div class="xf_mimic_outer" style="width: 80%;"></div>
+                            </div>
+                        </li>
+                                                <li>
+                            <p class="xf_mimic_outer">Ai</p>
+                            <div data-tip="搜索聊天对话问题不大" class="xf_progress xf_mimic_outer">
+                                <div class="xf_mimic_outer" style="width: 30%;"></div>
+                            </div>
+                        </li>
+                                                <li>
+                            <p class="xf_mimic_outer">Photoshop</p>
+                            <div data-tip="日常需要的图片处理基本没啥问题" class="xf_progress xf_mimic_outer">
+                                <div class="xf_mimic_outer" style="width: 36%;"></div>
+                            </div>
+                        </li>
+                                                <li>
+                            <p class="xf_mimic_outer">Image idear</p>
+                            <div data-tip="能满足基本的日常生活畅想" class="xf_progress xf_mimic_outer">
+                                <div class="xf_mimic_outer" style="width: 66%;"></div>
+                            </div>
+                        </li>
+                                                <li>
+                            <p class="xf_mimic_outer">Resource collect</p>
+                            <div data-tip="资源知识库等收集还是可以的" class="xf_progress xf_mimic_outer">
+                                <div class="xf_mimic_outer" style="width: 99%;"></div>
+                            </div>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="xf_site xf_mimic_outer site">
+                <div class="xf_outs">
+                    <h2>site/旗下站点</h2>
+                    <div class="underscore"><span></span></div>
+                    <div class="xf_site_bigbox">
+                                                <a href="https://hylove.top/	" target="_blank" rel="noopener noreferrer">小白💌Blog</a>
+                                                <a href="https://one.hylove.top/" target="_blank" rel="noopener noreferrer">one🎁主页</a>
+                                                <a href="https://lead.lxyq.link/" target="_blank" rel="noopener noreferrer">樱花🌸起始页</a>
+                                                <a href="https://hav.lxyq.link/" target="_blank" rel="noopener noreferrer">小白🎯导航</a>
+                                                <a href="https:///all.hylove.top/" target="_blank" rel="noopener noreferrer">Xiaobai小白主页</a>
+                                                <a href="https://home.lxyq.link/" target="_blank" rel="noopener noreferrer">励心缘起の主页</a>
+                                                <a href="https://nav.lxyq.link/" target="_blank" rel="noopener noreferrer">励心缘起の网址导航</a>
+                                                <a href="https://newpage.hylove.top/" target="_blank" rel="noopener noreferrer">小白のHome</a>
+                                                <a href="https://aigc.lxyq.link/" target="_blank" rel="noopener noreferrer">AI引导页</a>
+                                                <a href="https://ai.lxyq.link/" target="_blank" rel="noopener noreferrer">小白のChatgpt导航</a>
+                                                <a href="https://ai.lxyq.link/" target="_blank" rel="noopener noreferrer">小白卟白のAIGC导航</a>
+                                                <a href="https://newhome.hylove.top/" target="_blank" rel="noopener noreferrer">Xiaobaiの个人主页</a>
+                                                <a href="https:///go.lxyq.link/" target="_blank" rel="noopener noreferrer">路遥·首页空间</a>
+                                                <a href="https:///hot.hylove.top/" target="_blank" rel="noopener noreferrer">今日hot热榜</a>
+                                                <a href="https:///rss.lxyq.link" target="_blank" rel="noopener noreferrer">rss订阅热榜</a>
+                                                <a href="https:///hi.hylove.top/" target="_blank" rel="noopener noreferrer">小白·搜索主页</a>
+                                                <a href="https:///search.hylove.top/" target="_blank" rel="noopener noreferrer">小白の搜索引擎</a>
+                                                <a href="https:///star.lxyq.link/" target="_blank" rel="noopener noreferrer">小白主页·仰望星空</a>
+                                                <a href="https:///star.lxyq.link/" target="_blank" rel="noopener noreferrer">小白-个人引导页</a>
+                                                <a href="https:///hygge.lxyq.link/" target="_blank" rel="noopener noreferrer">hygge·mini UI主页</a>
+                                                <a href="https:///qq.hylove.top/" target="_blank" rel="noopener noreferrer">路遥知马力·主页空间</a>
+                                                <a href="https:///huose.hylove.top/" target="_blank" rel="noopener noreferrer">路遥小窝~不念过往</a>
+                                                <a href="https:///all.lxyq.link/" target="_blank" rel="noopener noreferrer">小白·永久地址发布页</a>
+                                                <a href="https:///status.hylove.top/" target="_blank" rel="noopener noreferrer">小白-站点监控</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="xf_server_inf">
+                <div class="xf_cpu xf_mimic_outer">
+                    <h3>CPU / 处理器使用率</h3>
+                    <div class="underscore" style="margin: 15px"><span></span></div>
+                    <div class="xf_usage xf_mimic_outer">
+                        <span>98.5%</span>
+                        <div class="hw_progress xf_mimic_internal">
+                            <div class="xf_mimic_internal" style="width: 98.5%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xf_mem xf_mimic_outer">
+                    <h3>MEM / 内存使用率</h3>
+                    <div class="underscore" style="margin: 15px"><span></span></div>
+                    <div class="xf_usage xf_mimic_outer">
+                        <span>21.1%</span>
+                        <div class="hw_progress xf_mimic_internal">
+                            <div class="xf_mimic_internal" style="width: 21.1%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xf_friend xf_mimic_outer">
+                <div class="xf_outs">
+                    <h3>友情链接：</h3>
+                                        <span>
+                        <a href="https://hylove.top/" target="_blank" data-tip="小白·Blog博客"
+                            rel="noopener noreferrer">
+                            <img src="static/picture/hy.jpg" alt="联系小白">小白の学习世界</a>
+                        <a href="https://one.hylove.top/" target="_blank" data-tip="小白·主页"
+                            rel="noopener noreferrer">
+                            <img src="static/picture/xiaobai-one.png" alt="联系小白">小白·主页</a>
+                        <a href="https://hav.hylove.top/" target="_blank" data-tip="小白·nav导航"
+                            rel="noopener noreferrer">
+                            <img src="static/picture/xiaobai-nav.png" alt="联系小白">nav综合导航</a>
+                        <a href="https://hot.hylove.top/" target="_blank" data-tip="小白·hot热榜"
+                            rel="noopener noreferrer">
+                            <img src="static/picture/hot-hylove.png" alt="联系小白">今日热榜</a>
+                        <a href="http://lixinyuanqi.ysepan.com/" target="_blank" data-tip="自建·云盘资源站点"
+                            rel="noopener noreferrer">
+                            <img src="static/picture/yunpan.png" alt="联系小白">励心缘起·云盘资源站</a>
+                        <a href="https://xydh.fun/lovezy/" target="_blank" data-tip="自建·大学生学习站点"
+                            rel="noopener noreferrer">
+                            <img src="static/picture/xb.png" alt="联系小白">大学生搬砖之家</a>
+                                    </div>
+            </div>
+        </section>
+        <footer class="xf_mimic_outer">
+            <p>Copyright &copy; 2024 <a href="https://a.hylove.top" target="_blank"
+                    rel="noopener noreferrer">小白-简记与叙</a>&nbsp;<span>本站已安全运行<b id="xf_time"
+                        style="display:none;">0</b><b id="xf_times">1</b>天</span></p>
+            <p><img src="static/picture/filing.png" alt="备案ico"><a href="http://beian.miit.gov.cn/" target="_blank"
+                    rel="noopener noreferrer">赣ICP备20220430213号-1</a></p>
+
+        </footer>
+    </main>
+    <!-- <div class="wx_picture">
+        <img src="static/picture/xiaobai-wx.jpg" alt="我的微信"> -->
+    </div>
+    <div id="xf_at_night" class="toggle xf_mimic_outer iconfont dark-mode-toggle btn btn-dark p-1" data-tip="切换主题">
+        <span><i id="daytime"></i></span>
+        <span><i id="night"></i></span>
+    </div>
+    <div id="xf_friend_link" class="xf_mimic_outer iconfont" data-tip="添加友链" onclick="my_friends()">
+        <span>&#xe726;</span>
+    </div>
+    <div id="xf_GoTop" class="mytooltip xf_mimic_outer iconfont" data-tip="返回顶部"><span>&#xe62c;</span></div>
+
+    <script src="static/js/index.js"></script>
+    <script src="static/js/script.js"></script>
+    <script src="static/js/fireworks.js"></script>
+    <script type="text/javascript">
+        function openwx() {
+            if ($(".wx_picture").is(":hidden")) {
+                $(".wx_picture").show();
+            } else {
+                $(".wx_picture").hide();
+            }
+
+        }
+        (function () {
+            var s1 = "2022-04-28";
+            s1 = new Date(s1.replace(/-/g, "/"));
+            s2 = new Date();
+            var days = s2.getTime() - s1.getTime();
+            var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+            document.getElementById('xf_times').innerHTML = number_of_days;
+            const container = document.getElementById('xf_typewriters')
+            const data = "小白，简单记录，叙说过往。他站在绿荫里，就抱住了一树晴朗，他穿过一条街巷，就拾起了数十年的过往，少年有黄昏也烧不完的志得意满，千难万险，也可一马平川。".split('')
+            let index = 0
+            function writing() {
+                if (index < data.length) {
+                    container.innerHTML += data[index++]
+                    let timer = setTimeout(writing, 120)
+                    console.log(timer)
+                }
+            }
+            writing()
+        })();
+        $(window).scroll(function () {
+            var sc = $(window).scrollTop();
+            var rwidth = $(window).width()
+            if (sc > 0) {
+                $("#xf_GoTop").css("display", "block");
+            } else {
+                $("#xf_GoTop").css("display", "none");
+            }
+        })
+        $("#xf_GoTop").click(function () {
+            var sc = $(window).scrollTop();
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+        })
+        var dark_mode = function () {
+            window.darkMode.init({
+                toggle: document.querySelector(".dark-mode-toggle"),
+                classes: {
+                    light: "light",
+                    dark: "dark",
+                },
+                default: "light",
+                storageKey: "example_dark_mode_pref",
+                onInit: function (e) {
+                    e.style.visibility = "visible";
+                },
+                onChange: function (t) {
+                    console.log("启动昼夜模式：" + t);
+                }
+            });
+        }
+        dark_mode();
+        $(function () {
+            $(".my-wx").eq(0).click(function () {
+                if ($('.wx_picture').is(':hidden')) {
+                    $(".wx_picture").fadeIn(1000).show();
+                } else {
+                    $(".wx_picture").hide(0);
+                }
+            });
+            $(document).click(function (event) {
+                var _con = $('.my-wx');
+                if (!_con.is(event.target) && _con.has(event.target).length === 0) {
+                    $('.wx_picture').hide(0);
+                }
+            });
+        })
+        function my_friends() {
+            window.open("/index/friend.html");
+        }
+    </script>
+</body>
+
+</html>
